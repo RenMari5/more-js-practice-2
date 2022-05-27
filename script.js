@@ -21,3 +21,19 @@ const VendingMachine = [
   { name: "RedBull", code: "A03", quantity: 3, price: 2.45 },
   { name: "Sour Candy", code: "B02", quantity: 7, price: 1.89 },
 ];
+
+// 2. Add item to VendingMachine
+//parameters: array, item
+
+function newItem(array, item) {
+  return array.push(item);
+}
+
+newItem(VendingMachine, {
+  name: "Donuts",
+  code: "B03",
+  quantity: 10,
+  price: 4.82,
+});
+
+console.log(VendingMachine);
