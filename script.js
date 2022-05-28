@@ -58,3 +58,13 @@ function updatePrice(array, code, newPrice) {
 }
 
 updatePrice(vendingMachine, "B03", 2.0);
+
+// 5. remove item from stock (by code)
+
+function removeItem(array, code) {
+  const index = array.findIndex((item) => item.code === code);
+  return array.splice(index, 1);
+}
+
+removeItem(vendingMachine, "B03");
+console.log(vendingMachine);
