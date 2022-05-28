@@ -48,3 +48,13 @@ function updateQuantity(array, code, newQuantity) {
 
 updateQuantity(vendingMachine, "B03", 2);
 console.log(vendingMachine);
+
+// 4. update price
+//Do not use find
+
+function updatePrice(array, code, newPrice) {
+  const findPriceIndex = array.findIndex((item) => item.code === code);
+  return (array[findPriceIndex].price = newPrice);
+}
+
+updatePrice(vendingMachine, "B03", 2.0);
