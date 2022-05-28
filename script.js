@@ -37,3 +37,14 @@ newItem(VendingMachine, {
 });
 
 console.log(VendingMachine);
+
+//3. update quantity
+//parameters: array, code, newQuantity
+
+function updateQuantity(array, code, newQuantity) {
+  let foundItem = array.find((item) => item.code === code);
+  foundItem.quantity = newQuantity;
+}
+
+updateQuantity(VendingMachine, "B03", 2);
+console.log(VendingMachine);
