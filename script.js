@@ -16,7 +16,7 @@ pickRandom(people);
 // 1. Create VendingMachine array
 // Every Item has a name, a code, a quantity, a price (give it 2 items to start)
 
-const VendingMachine = [
+const vendingMachine = [
   { name: "Chips", code: "A02", quantity: 5, price: 1.26 },
   { name: "RedBull", code: "A03", quantity: 3, price: 2.45 },
   { name: "Sour Candy", code: "B02", quantity: 7, price: 1.89 },
@@ -29,22 +29,22 @@ function newItem(array, item) {
   return array.push(item);
 }
 
-newItem(VendingMachine, {
+newItem(vendingMachine, {
   name: "Donuts",
   code: "B03",
   quantity: 10,
   price: 4.82,
 });
 
-console.log(VendingMachine);
+console.log(vendingMachine);
 
 //3. update quantity
 //parameters: array, code, newQuantity
 
 function updateQuantity(array, code, newQuantity) {
   let foundItem = array.find((item) => item.code === code);
-  foundItem.quantity = newQuantity;
+  return (foundItem.quantity = newQuantity);
 }
 
-updateQuantity(VendingMachine, "B03", 2);
-console.log(VendingMachine);
+updateQuantity(vendingMachine, "B03", 2);
+console.log(vendingMachine);
